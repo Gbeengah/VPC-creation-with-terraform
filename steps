@@ -1,0 +1,28 @@
+provisioning a virtual private cloud (vpc-a) with Ipv4 block "10.0.0.0/16" and a subnet (subnet-a) with ipv4 block "10.0.1.0/24" using terraform on Virtual Studio Code(Vscode)
+
+steps taken -
+
+•⁠  ⁠denoted the correct ipv4 block to be created and a suitable subnet to create
+  in this case,
+  vpc - a = 10.0.0.0/16
+  sub - a = 10.0.1.0/24
+
+ - log onto aws.console.com, create an account(if you don't already have 
+  one), create an iam user and create an "access key" and a "secret key" then 
+  download it as an .csv file
+
+ - Go to Terraform.io, click on documentation and click on vpc on the 
+  sub-menu, first copy the code on how to initialize terraform then copy the 
+  code on how to provision a vpc
+
+•⁠  ⁠open vscode, click on terminal, 
+  - make a folder/directory : mkdir <your directory>
+  - change to that directory : cd <your directory>
+  - create a file, (download the .tf extension if you need to) e.g sub.tf
+  - paste the code on how to setup terraform and how to  provision your vpc in the terraform vscode file, substituting your secret key and access key previously generated in the code and also putting in your vpc and subnet ipv4 addresses(it’ll look similar to page one of the pdf attached below)   
+  - initialize terraform : “terraform init” then save file
+
+•⁠  ⁠then, on terminal,
+  - type “terraform plan” and enter then type “terraform apply” and enter type yes
+
+•⁠  ⁠go to your console, login with your iam credentials and go to the region you specified in your code to confirm if subnet-a  and vpc-a have been created
